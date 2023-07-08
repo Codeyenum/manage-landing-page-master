@@ -23,57 +23,164 @@ picture {
 h2,
 h3,
 h4 {
-    color: var(--darkBlue);
+    color: var(--darkBlue);    
     line-height: 1.25;
 }
 
-h2 {
-    font-size: 2.3rem;
-    margin: 0.5rem 0;
-}
-
 body {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    text-align: center;
-    color: var(--darkGrayishBlue);
-
+    background-image: url(./images/bg-tablet-pattern.svg), url(./images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
     background-size: 117.5%, 90%;
     background-position: top -6rem right -8em, top 70vh right -13em;
+    color: var(--darkGrayishBlue);
+
+    font-family: 'Be Vietnam Pro', sans-serif;
     line-height: 1.7;
     margin: 0 1.5rem;
+    text-align: center;
 }
 
-header {
+main a {
+    background-color: var(--brightRed);
+    border-radius: 2.5rem;
+    color: var(--veryLightGray);
+    display: inline-block;
+
+    font-size: .8rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 0.75rem 2.25rem;
+    text-decoration: none;
+}
+
+.header-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    background-color: transparent;
     min-width: 100%;
     padding: 2.5rem 0;
-    background-color: transparent;
 }
 
-.intro-section {
+.hero-section {
+    background-image: url(./images/bg-simplify-section-mobile.svg);
     display: flex;
     flex-direction: column;
-
-    background-image: url(./images/bg-simplify-section-mobile.svg);
 }
 
-.intro-section p {
+.hero-section h2 {
+    font-size: 2.3rem;
+    margin: 0.5rem 0;
+}
+
+.hero-section p {
     font-size: 1rem;
     margin: 0.75rem 0;
 }
 
-main a {
-    text-decoration: none;
-    color: var(--veryLightGray);
-    background-color: var(--brightRed);
+.features-intro {
+    margin: 3rem 0;
+}
 
-    display: inline-block;
-    font-size: .8rem;
-    padding: 0.75rem 2.25rem;
-    margin: 1rem;
-    border-radius: 2.5rem;
+h3 {
+    font-size: 1.85rem;
+    padding: 1.5rem;
+    line-height: 1.4;
+}
+
+.features-intro p {
+    font-size: 0.9rem;
+    padding: 0 1em;
+    line-height: 1.85;
+}
+
+.feature {
+    font-size: .9rem;
+    margin: 3rem -0.5rem;
+    text-align: left;
+}
+
+.feature p {
+    line-height: 2;
+    font-size: .88rem;
+}
+
+.feature-title {
+    display: flex;
+    align-items: center;
+    background-color: var(--veryPaleRed);
+    margin: .5rem -1rem 0.75rem 0;
+}
+
+.feature-title span {
+    background-color: var(--brightRed);    
+    border-radius: 1.5rem;
+    color: var(--veryLightGray);    
+    font-weight: 500;
+    padding: 0.4rem 1.35rem;
+    margin-right: 1rem;
+}
+
+.feature-title h4 {
+    font-size: 1rem;
+    letter-spacing: -1px;
+}
+
+.slide {
+    display: none;
+    background-color: var(--veryLightGray);
+    position: relative;
+    left: 100vw;
+    padding: 3rem 0;    
+}
+
+.slide img {
+    width: 5rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+    position: absolute;
+    top: -3.5rem;
+}
+
+.slide p {
+    font-size: .9rem;
+    margin: 1.5rem 0 0;
+    padding: 0 1rem;    
+}
+
+.slide.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.dots-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots {
+    border: 1px solid var(--brightRed);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 2px 0rem;
+    width: 8px;
+    height: 8px;
+}
+
+.dots.selected {
+    background-color: var(--brightRed);
+}
+
+.testimonial-section h4 {
+    margin: .5rem 0 .25rem;
+}
+
+.testimonial-section a{
+    margin: 3rem 0;
 }
