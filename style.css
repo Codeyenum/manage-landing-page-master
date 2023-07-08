@@ -131,8 +131,7 @@ h3 {
 .slide {
     display: none;
     background-color: var(--veryLightGray);
-    position: relative;
-    left: 100vw;
+    position: relative;    
     padding: 3rem 0;    
 }
 
