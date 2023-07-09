@@ -12,32 +12,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Manage landing page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
 </head>
 
-<body>    
-    <header class="header-container">
+<body>
+    <header class="header">
         <img src="./images/logo.svg" alt="">
-        <!-- Pricing
-        Product
-        About Us
-        Careers
-        Community
-
-        Get Started -->
-        <img src="./images/icon-hamburger.svg" alt="">
-    </header>     
+        <nav>
+            <ul class="header-nav">
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </nav>
+        <img class="menu-button" src="./images/icon-hamburger.svg" alt="">  
+        <a href="" class="start-link">Get Started</a>
+    </header>
     <main>
         <div class="hero-section">
             <img src="./images/illustration-intro.svg" alt="">
@@ -47,7 +38,7 @@
                     Manage makes it simple for software teams to plan day-to-day
                     tasks while keeping the larger team goals in view.
                 </p>
-                <a href="">Get Started</a>
+                <a href="" class="start-link">Get Started</a>
             </article>
         </div>
         <div class="features-container">
@@ -62,7 +53,7 @@
             <div class="features-section">
                 <article class="feature">
                     <div class="feature-title">
-                        <span>01</span> 
+                        <span>01</span>
                         <h4>Track company-wide progress</h4>
                     </div>
                     <p>
@@ -75,7 +66,7 @@
                     <div class="feature-title">
                         <span>02</span>
                         <h4>Advanced built-in reports</h4>
-                    </div>                    
+                    </div>
                     <p>
                         Set internal delivery estimates and track progress toward company
                         goals. Our customisable dashboard helps you build out the reports
@@ -86,7 +77,7 @@
                     <div class="feature-title">
                         <span>03</span>
                         <h4>Everything you need in one place</h4>
-                    </div>                    
+                    </div>
                     <p>
                         Stop jumping from one service to another to communicate, store files,
                         track tasks and share documents. Manage offers an all-in-one team
@@ -137,40 +128,49 @@
                 <span class="dots ali"></span>
                 <span class="dots richard"></span>
                 <span class="dots shanai"></span>
-              </div> 
-            <a href="">Get Started</a>
+            </div>
+            <a href="" class="start-link">Get Started</a>
         </div>
-        <div>
+        <div class="simplify-section">
+            <img src="./images/bg-simplify-section-mobile.svg" alt="">
             <h3>Simplify how your team works today.</h3>
             <a href="">Get Started</a>
         </div>
     </main>
-    <footer>
-        <nav>
-            <div>
-                Home
-                Pricing
-                Products
-                About Us
-            </div>
-            <div>
-                Careers
-                Community
-                Privacy Policy
-            </div>
-        </nav>
-        <form> 
+    <footer class="footer">
+        <form class="update-form">
             <div>
                 <input type="text" name="" id="" placeholder="Updates in your inbox…">
             </div>
             <button type="submit">Go</button>
         </form>
-        <p>Copyright 2020. All Rights Reserved</p>        
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <div class="socials-container">
+            <img src="./images/icon-facebook.svg" alt="">
+            <img src="./images/icon-youtube.svg" alt="">
+            <img src="./images/icon-twitter.svg" alt="">
+            <img src="./images/icon-pinterest.svg" alt="">
+            <img src="./images/icon-instagram.svg" alt="">
+        </div>
+        <img class="footer-logo" src="./images/logo.svg" alt="">
+        <p>Copyright 2020. All Rights Reserved</p>
     </footer>
-    <div class="attribution">
+    <!-- <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
     <script src="./index.js"></script>
 </body>
 

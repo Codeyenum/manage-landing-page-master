@@ -23,7 +23,7 @@ picture {
 h2,
 h3,
 h4 {
-    color: var(--darkBlue);    
+    color: var(--darkBlue);
     line-height: 1.25;
 }
 
@@ -40,6 +40,7 @@ body {
     text-align: center;
 }
 
+.start-link,
 main a {
     background-color: var(--brightRed);
     border-radius: 2.5rem;
@@ -53,19 +54,47 @@ main a {
     text-decoration: none;
 }
 
-.header-container {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     background-color: transparent;
     min-width: 100%;
-    padding: 2.5rem 0;
+    padding: 1.75rem 0;
+}
+
+.header a {
+    color: var(--veryLightGray);
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.header nav,
+.header .start-link {
+    display: none;
+}
+
+.header-nav,
+.header-nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav li {
+    list-style: none;
+    margin: 0 .5rem;
+}
+
+.header-nav a {
+    color: var(--darkBlue);
+    height: 100%;
 }
 
 .hero-section {
-    background-image: url(./images/bg-simplify-section-mobile.svg);
     display: flex;
     flex-direction: column;
 }
@@ -111,13 +140,14 @@ h3 {
     display: flex;
     align-items: center;
     background-color: var(--veryPaleRed);
+    border-radius: 1.5rem 0 0 1.5rem;
     margin: .5rem -1rem 0.75rem 0;
 }
 
 .feature-title span {
-    background-color: var(--brightRed);    
+    background-color: var(--brightRed);
     border-radius: 1.5rem;
-    color: var(--veryLightGray);    
+    color: var(--veryLightGray);
     font-weight: 500;
     padding: 0.4rem 1.35rem;
     margin-right: 1rem;
@@ -131,8 +161,8 @@ h3 {
 .slide {
     display: none;
     background-color: var(--veryLightGray);
-    position: relative;    
-    padding: 3rem 0;    
+    position: relative;
+    padding: 3rem 0;
 }
 
 .slide img {
@@ -146,7 +176,7 @@ h3 {
 .slide p {
     font-size: .9rem;
     margin: 1.5rem 0 0;
-    padding: 0 1rem;    
+    padding: 0 1rem;
 }
 
 .slide.show {
@@ -180,6 +210,259 @@ h3 {
     margin: .5rem 0 .25rem;
 }
 
-.testimonial-section a{
+.testimonial-section a {
     margin: 3rem 0;
+}
+
+.simplify-section {
+    background-color: var(--brightRed);
+    margin: 0 -1.5rem;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.simplify-section img {
+    position: absolute;
+    top: 15%;
+}
+
+.simplify-section h3 {
+    color: var(--veryLightGray);
+    font-size: 2.5rem;
+    line-height: 1.3;
+    padding: 1rem;
+}
+
+.simplify-section a {
+    color: var(--brightRed);
+    background-color: var(--veryLightGray);
+    padding: 0.65rem 1.75rem;
+}
+
+footer {
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    flex-direction: column;
+    margin: 0 -1.5rem;
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 3.5rem;
+    text-align: left;
+}
+
+.update-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+.update-form input {
+    height: 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    padding: 0 2rem;
+}
+
+.update-form button {
+    background-color: var(--brightRed);
+    border: none;
+    border-radius: 2rem;
+    color: var(--veryLightGray);
+    font-size: .75rem;
+    margin: 0 .5rem;
+    padding: 0 1.85rem;
+    text-transform: uppercase;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav li {
+    font-size: .9rem;
+    margin: .75rem 0;
+}
+
+.footer-nav a {
+    color: var(--veryLightGray);
+    text-decoration: none;
+}
+
+.socials-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socials-container img {
+    margin: 1rem 0;
+    width: 2rem;
+}
+
+.footer-logo {
+    margin: 2.5rem auto 3rem;
+    width: 42.5%;
+}
+
+.footer p {
+    font-size: 0.75rem;
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-size: 52.5%, 40%;
+        background-position: top -8.5rem right -5em, top 140vh left -16em;
+        margin: 0 2.25rem;
+    }
+
+    .header nav,
+    .header .start-link {
+        display: block;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .hero-section img {
+        margin: auto;
+        width: 80%;
+    }
+
+    .hero-section article,
+    .features-intro {
+        padding: 1rem 6rem;
+    }
+
+    .features-section {
+        padding: 0 1rem;
+    }
+
+    .feature {
+        font-size: 1rem;
+        margin: 3rem -0.5rem;
+    }
+
+    .feature p {
+        font-size: .9rem;
+    }
+
+    .feature-title {
+        margin: .5rem -3rem 0.75rem 0;
+    }
+
+    .simplify-section,
+    footer {
+        margin: 0 -2.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        background-position: top -8.5rem right -5em, top 155vh left -16em;
+        margin: 0 8.25rem;                
+    }
+
+    .header a {
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 3rem 0 0 0;
+        text-align: left;
+    }
+
+    .hero-section article {
+        padding: 0;
+    }
+
+    .hero-section img {
+        margin: auto;
+        width: 60%;
+    }
+
+    .hero-section h2 {
+        font-size: 3.1rem;
+        margin: 2rem 0;
+    }
+
+    .hero-section p {
+        padding: 0 2rem 0 0;
+        max-width: 27.5vw;
+    }
+
+    .hero-section .start-link {
+        margin: 2.5rem 0;
+    }
+
+    .features-container {
+        display: flex;
+        text-align: left;
+        margin: 2rem 0;
+    }
+
+    .features-intro {
+        padding: 0;   
+        width: 100%;
+    }
+
+    .features-intro h3 {
+        font-size: 2.25rem;
+        padding: 0;
+    }
+
+    .features-intro p {
+        font-size: 1rem;
+        margin: 2rem  0;    
+        max-width: 27.5vw;
+        padding: 0 1rem 0 0;
+    }
+
+    .feature-title {
+        background-color: transparent;
+        margin: 0;
+    }
+
+    .features-section {
+        width: 90%;
+    }
+
+    .feature p {
+        padding: 0 0 0 4.8rem;
+    }
+
+    /* .dots-container {
+        display: none;
+    } */
+
+    .testimonial-carousel  {
+        display: flex;        
+        height: 25rem;
+        margin: 0 -32.5rem;
+        justify-content: space-evenly;
+        align-items: center;        
+        gap: 3rem;
+    }
+    
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        
+    /* position: absolute; */
+    padding: 3rem 0;    
+}
+
 }
