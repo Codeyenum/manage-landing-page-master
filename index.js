@@ -16,3 +16,4 @@ for (let dotSelector of dotSelectors) {
         }
     })
 }
+
