@@ -10,6 +10,7 @@ carouselSlides.forEach((slide, index) => {
     slide.style.transform = `translateX(${index * 110}%)`;
 });
 
+// desktop carousel 
 for (let dotSelector of dotSelectors) {
     dotSelector.addEventListener("click", () => {
         let slideOwner = dotSelector.classList[1];
@@ -37,8 +38,10 @@ for (let dotSelector of dotSelectors) {
     });
 }
 
+// mobile carousel
 for (let dotSelector of dotSelectors) {
     dotSelector.addEventListener("click", () => {
+        // to clear selected dot styling then add to new current dot
         for (let dotSelector of dotSelectors) {
             dotSelector.classList.remove("selected");
         }
@@ -59,8 +62,7 @@ const form = document.querySelector(".update-form");
    // success and error assignment functions
    function error(input, message) {
     const inputField = input.parentElement
-    
-    console.log(inputField.classList);
+        
     // styling class swap
     inputField.classList.remove("success")
     inputField.classList.add("error")
