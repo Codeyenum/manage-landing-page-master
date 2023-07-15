@@ -52,3 +52,54 @@ for (let dotSelector of dotSelectors) {
         }
     })
 }
+
+const email = document.getElementById("Email");
+const form = document.querySelector(".update-form");
+
+   // success and error assignment functions
+   function error(input, message) {
+    const inputField = input.parentElement
+    
+    console.log(inputField.classList);
+    // styling class swap
+    inputField.classList.remove("success")
+    inputField.classList.add("error")
+
+    // error message handling
+    error_message = inputField.querySelector("small")
+    error_message.innerHTML = `<em>${message}</em>`      
+ }
+
+ function success(input) {
+    const inputField = input.parentElement
+    
+    // styling class swap
+    inputField.classList.remove("error")
+    inputField.classList.add("success")
+
+    // error message handling
+    error_message = inputField.querySelector("small")
+    error_message.innerHTML = ""   
+ }
+
+    // validation functions
+    function checkEmail(input) {
+        const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (input.value.trim() === "") {
+           return error(input, `${input.id} cannot be empty`);
+        }
+        if (regEx.test(input.value.trim())) {
+           success(input);
+        }
+        else {
+           error(input, 'Please insert a valid email');
+        }
+     }
+
+     form.addEventListener("submit", (e) => {
+        e.preventDefault()        
+        let is_email_valid = checkEmail(email);
+        if (is_email_valid) {
+           
+        }      
+     })

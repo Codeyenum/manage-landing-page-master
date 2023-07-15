@@ -277,15 +277,49 @@ footer {
     padding: 0 2rem;
 }
 
+.input_field {
+    position: relative;
+ }
+ 
+ small {
+    font-size: .75rem;
+    visibility: hidden;
+    color: var(--brightRed);
+    position: absolute;
+    left: 1rem;
+    bottom: -2.25rem;
+    margin: 1rem;
+    z-index: 10;
+ }
+ 
+ .input_field.success input {
+    border: 2px solid hsl(154, 59%, 51%);
+ }
+ 
+ .input_field.error input {
+    border: 2px solid var(--brightRed);
+    /* margin-bottom: 2rem; */
+ }
+ 
+ .input_field.error small {
+    visibility: visible;
+ } 
+
 .update-form button {
     background-color: var(--brightRed);
     border: none;
     border-radius: 2rem;
     color: var(--veryLightGray);
+    cursor: pointer;
     font-size: .75rem;
     margin: 0 .5rem;
+    height: 2.5rem;
     padding: 0 1.85rem;
     text-transform: uppercase;
+}
+
+.update-form button:hover {
+    opacity: 0.75;
 }
 
 .footer-nav ul {
@@ -567,7 +601,11 @@ footer {
         height: 2.25rem;
         padding: .1rem 1.5rem 0;
         text-transform: capitalize;
-    }    
+    }  
+    
+    small {        
+        bottom: -3.5rem;
+    }
 
     .company-media {
         display: flex;
@@ -594,5 +632,14 @@ footer {
         align-self: flex-end;
         font-size: 0.75rem;
         margin: 0;
+    }
+
+    a:hover {
+        opacity: .5;
+    }
+
+    footer a:hover {
+        opacity: 1;
+        color: var(--brightRed);
     }
 }
