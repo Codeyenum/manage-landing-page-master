@@ -127,7 +127,7 @@ h3 {
 
 .feature {
     font-size: .9rem;
-    margin: 3rem -0.5rem;
+    margin: 3rem 0rem;
     text-align: left;
 }
 
@@ -141,7 +141,7 @@ h3 {
     align-items: center;
     background-color: var(--veryPaleRed);
     border-radius: 1.5rem 0 0 1.5rem;
-    margin: .5rem -1rem 0.75rem 0;
+    margin: .5rem -1.5rem 0.75rem 0;
 }
 
 .feature-title span {
@@ -370,7 +370,7 @@ footer {
 
     body {
         background-position: top -8.5rem right -5em, top 155vh left -16em;
-        margin: 0 8.25rem;                
+        margin: 0 8.25rem;
     }
 
     .header a {
@@ -415,7 +415,7 @@ footer {
     }
 
     .features-intro {
-        padding: 0;   
+        padding: 0;
         width: 100%;
     }
 
@@ -426,7 +426,7 @@ footer {
 
     .features-intro p {
         font-size: 1rem;
-        margin: 2rem  0;    
+        margin: 2rem 0;
         max-width: 27.5vw;
         padding: 0 1rem 0 0;
     }
@@ -444,25 +444,58 @@ footer {
         padding: 0 0 0 4.8rem;
     }
 
-    /* .dots-container {
-        display: none;
-    } */
-
-    .testimonial-carousel  {
-        display: flex;        
+    .testimonial-carousel {
+        display: flex;
         height: 25rem;
-        margin: 0 -32.5rem;
+        margin: 0 -8.25rem;        
         justify-content: space-evenly;
         align-items: center;        
-        gap: 3rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;        
+        width: 40vw;
+        height: 56.5%;
+        transition: all 1.5s ease-in;
+    }
+
+    .slide.selected {
+        transform: translateX(0vw);
+        transition: all 1.5s ease-in;
+    }
+
+    .simplify-section {
+        display: flex;        
+        margin: 0 -8.25rem;
+        padding: 3rem 8.25rem;
+        position: relative;
     }
     
-.slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;        
-    /* position: absolute; */
-    padding: 3rem 0;    
-}
+    .simplify-section img {
+        position: absolute;
+        transform: rotate(120deg);
+        top: -50%;
+        width: 10%;
+        /* top: -6rem; */
+        right: 0;
+    }
+    
+    .simplify-section h3 {
+        color: var(--veryLightGray);
+        font-size: 2.5rem;
+        line-height: 1.3;
+        padding: 1rem;
+    }
+    
+    .simplify-section a {
+        color: var(--brightRed);
+        background-color: var(--veryLightGray);
+        padding: 0.65rem 1.75rem;
+    }
 
 }
